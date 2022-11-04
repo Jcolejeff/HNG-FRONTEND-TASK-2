@@ -5,8 +5,8 @@ export const basicSchema = yup.object().shape({
 		.string()
 		.email("Please enter a valid email")
 		.required("Please enter your email"),
-	first_name: yup.string().required("Please enter a message"),
-	last_name: yup.string().required("Please enter a message"),
+	first_name: yup.string().required("Please enter your first name"),
+	last_name: yup.string().required("Please enter your last name"),
 	message: yup.string().required("Please enter a message"),
 	acceptedTos: yup
 		.boolean()

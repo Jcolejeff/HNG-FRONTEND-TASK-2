@@ -37,34 +37,42 @@ const BasicForm = () => {
 				<h1>Contact Me</h1>
 				<p>Hi there, contact me to ask me about anything you have in mind.</p>
 			</div>
-
-			<label htmlFor="first_name">First name</label>
-			<input
-				id="first_name"
-				type="text"
-				placeholder="Enter your First name"
-				value={values.first_name}
-				onChange={handleChange}
-				onBlur={handleBlur}
-				className={errors.first_name && touched.first_name ? "input-error" : ""}
-			/>
-			{errors.first_name && touched.first_name && (
-				<p className="error">{errors.first_name}</p>
-			)}
-			<label htmlFor="last_name">Last name</label>
-			<input
-				id="last_name"
-				type="text"
-				placeholder="Enter your Last name"
-				value={values.last_name}
-				onChange={handleChange}
-				onBlur={handleBlur}
-				className={errors.last_name && touched.last_name ? "input-error" : ""}
-			/>
-			{errors.last_name && touched.last_name && (
-				<p className="error">{errors.last_name}</p>
-			)}
-
+			<section className="names">
+				<div>
+					<label htmlFor="first_name">First name</label>
+					<input
+						id="first_name"
+						type="text"
+						placeholder="Enter your First name"
+						value={values.first_name}
+						onChange={handleChange}
+						onBlur={handleBlur}
+						className={
+							errors.first_name && touched.first_name ? "input-error" : ""
+						}
+					/>
+					{errors.first_name && touched.first_name && (
+						<p className="error">{errors.first_name}</p>
+					)}
+				</div>
+				<div>
+					<label htmlFor="last_name">Last name</label>
+					<input
+						id="last_name"
+						type="text"
+						placeholder="Enter your Last name"
+						value={values.last_name}
+						onChange={handleChange}
+						onBlur={handleBlur}
+						className={
+							errors.last_name && touched.last_name ? "input-error" : ""
+						}
+					/>
+					{errors.last_name && touched.last_name && (
+						<p className="error">{errors.last_name}</p>
+					)}
+				</div>
+			</section>
 			<label htmlFor="email">Email</label>
 			<input
 				value={values.email}
@@ -82,6 +90,7 @@ const BasicForm = () => {
 				value={values.message}
 				onChange={handleChange}
 				id="message"
+				rows="8"
 				type="textarea"
 				placeholder="Send me a message and I'll reply you as soon as possible..."
 				onBlur={handleBlur}

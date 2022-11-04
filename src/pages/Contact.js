@@ -11,8 +11,22 @@ const Contact = () => {
 const Wrapper = styled.main`
 	height: 100vh;
 	padding: 1rem;
-	background: #1a202c;
-	color: #f3f3f3;
+
+	margin-block-end: 6rem;
+
+	@media (min-width: 40em) {
+		padding-block-start: 6rem;
+		margin-block-end: 13rem;
+		.names {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 3rem;
+			justify-content: space-between;
+		}
+		form {
+			width: 60%;
+		}
+	}
 
 	.error {
 		color: #fc8181;
@@ -21,32 +35,14 @@ const Wrapper = styled.main`
 		margin-top: 0.25rem;
 	}
 
-	.checkbox {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		margin-top: 1rem;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 2rem;
-	}
-	nav h3 {
-		margin: 1rem;
-		cursor: pointer;
-		color: #718096;
-	}
-	nav h3:hover {
-		color: white;
+	#checkbox {
+		margin-block-start: 1.5rem;
 	}
 
 	form {
-		width: 95%;
-		max-width: 80vw;
+		width: 90%;
 		margin: 0 auto;
+		max-width: 780px;
 	}
 
 	form label {
@@ -64,8 +60,8 @@ const Wrapper = styled.main`
 		padding: 0.65rem 0.5rem;
 		font-size: 1rem;
 		color: white;
-		border: 2px solid #4a5568;
-		background-color: #2d3748;
+		border: 1px solid rgba(208, 213, 221, 1);
+
 		border-radius: 10px;
 		outline: none;
 	}
@@ -90,16 +86,17 @@ const Wrapper = styled.main`
 
 	button {
 		display: block;
-		margin: 1rem 0;
+		margin: 3rem 0;
 		padding: 0.35rem 0.5rem;
 		background-color: #4299e1;
-		color: #1a202c;
+		color: white;
 		border: none;
-		border-radius: 3px;
+		border-radius: 10px;
 		width: 100%;
 		font-size: 1rem;
 		font-weight: bold;
 		cursor: pointer;
+		padding-block: 1rem;
 	}
 
 	input.input-error,

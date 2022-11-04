@@ -28,6 +28,22 @@ const Links = () => {
 						</CustomDiv>
 					);
 				})}
+				<FooterTop id="social-links">
+					<a
+						href="https://hng9.slack.com/messages/C041JU70S5U/team/U0482L1J9FY"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="slack.png" alt="slack" />
+					</a>
+					<a
+						href="https://www.github.com/jcolejeff"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="github.png" alt="github" />
+					</a>
+				</FooterTop>
 			</ParentWrapper>
 		</>
 	);
@@ -96,4 +112,10 @@ const ParentWrapper = styled.div`
 			text-align: center;
 		}
 	}
+`;
+const FooterTop = styled.section`
+	display: flex;
+	gap: 1.3rem;
+	justify-content: center;
+	margin-block: 2rem 8rem;
 `;

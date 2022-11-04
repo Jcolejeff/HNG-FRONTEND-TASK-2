@@ -1,4 +1,4 @@
-### HNG 9 FRONTEND TASK 1
+### HNG 9 FRONTEND TASK 2
 
 [LIVE](https://hng-task-2-jeff.netlify.app/)
 

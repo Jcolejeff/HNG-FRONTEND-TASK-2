@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import BasicForm from "../components/BasicForm";
-import { useState } from "react";
 const Contact = () => {
-	const [view, setView] = useState("basic");
 	return (
 		<Wrapper>
 			<BasicForm />
@@ -56,7 +54,7 @@ const Wrapper = styled.main`
 		font-weight: bold;
 		display: block;
 		text-align: left;
-		margin: 1rem 0 0.2rem;
+		margin: 1rem 0 0.8rem 0;
 	}
 
 	input,

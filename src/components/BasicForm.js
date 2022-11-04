@@ -20,8 +20,8 @@ const BasicForm = () => {
 	} = useFormik({
 		initialValues: {
 			email: "",
-			firstName: "",
-			lastName: "",
+			first_name: "",
+			last_name: "",
 			message: "",
 			acceptedTos: "",
 		},
@@ -43,26 +43,26 @@ const BasicForm = () => {
 				id="first_name"
 				type="text"
 				placeholder="Enter your First name"
-				value={values.firstName}
+				value={values.first_name}
 				onChange={handleChange}
 				onBlur={handleBlur}
-				className={errors.firstName && touched.firstName ? "input-error" : ""}
+				className={errors.first_name && touched.first_name ? "input-error" : ""}
 			/>
-			{errors.firstName && touched.firstName && (
-				<p className="error">{errors.firstName}</p>
+			{errors.first_name && touched.first_name && (
+				<p className="error">{errors.first_name}</p>
 			)}
 			<label htmlFor="last_name">Last name</label>
 			<input
 				id="last_name"
 				type="text"
 				placeholder="Enter your Last name"
-				value={values.lastName}
+				value={values.last_name}
 				onChange={handleChange}
 				onBlur={handleBlur}
-				className={errors.lastName && touched.lastName ? "input-error" : ""}
+				className={errors.last_name && touched.last_name ? "input-error" : ""}
 			/>
-			{errors.lastName && touched.lastName && (
-				<p className="error">{errors.lastName}</p>
+			{errors.last_name && touched.last_name && (
+				<p className="error">{errors.last_name}</p>
 			)}
 
 			<label htmlFor="email">Email</label>
@@ -109,7 +109,7 @@ const BasicForm = () => {
 			{errors.acceptedTos && touched.acceptedTos && (
 				<p className="error">{errors.acceptedTos}</p>
 			)}
-			<button disabled={isSubmitting} type="submit" id="‘btn__submit">
+			<button disabled={isSubmitting} type="submit" id="btn__submit">
 				Send message
 			</button>
 		</form>

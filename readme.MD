@@ -1,6 +1,6 @@
 ### HNG 9 FRONTEND TASK 1
 
-[LIVE](https://hng-task-1-jeff.netlify.app/)
+[LIVE](https://hng-task-2-jeff.netlify.app/)
 
 #### Project Setup
 

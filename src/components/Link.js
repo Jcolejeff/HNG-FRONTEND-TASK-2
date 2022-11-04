@@ -81,7 +81,7 @@ const ParentWrapper = styled.div`
 		color: black;
 		background: #eaecf0;
 		text-decoration: none;
-		border: 1px solid #eaecf0;
+		border: 1.2px solid #eaecf0;
 		border-radius: 8px;
 		width: 76vw;
 		@media (max-width: 40em) {

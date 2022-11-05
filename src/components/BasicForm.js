@@ -29,8 +29,6 @@ const BasicForm = () => {
 		onSubmit,
 	});
 
-	console.log(errors);
-
 	return (
 		<form onSubmit={handleSubmit} autoComplete="off">
 			<div>
@@ -108,12 +106,13 @@ const BasicForm = () => {
 				type="checkbox"
 				placeholder=""
 				onBlur={handleBlur}
+				required
 				className={
 					errors.acceptedTos && touched.acceptedTos ? "input-error" : ""
 				}
 			/>
 			<span>
-				You agree to providing your data to jeffery who may contact you.
+				You agree to providing your data to Jeffery ikwuh who may contact you.
 			</span>
 			{errors.acceptedTos && touched.acceptedTos && (
 				<p className="error">{errors.acceptedTos}</p>

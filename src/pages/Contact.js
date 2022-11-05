@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import BasicForm from "../components/BasicForm";
+import { BasicForm, Footer } from "../components";
 const Contact = () => {
 	return (
 		<Wrapper>
 			<BasicForm />
+			<Footer />
 		</Wrapper>
 	);
 };
@@ -12,19 +13,14 @@ const Wrapper = styled.main`
 	height: 100vh;
 	padding: 1rem;
 
-	margin-block-end: 6rem;
-
 	@media (min-width: 40em) {
 		padding-block-start: 6rem;
-		margin-block-end: 15rem;
+
 		.names {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 3rem;
 			justify-content: space-between;
-		}
-		form {
-			width: 60%;
 		}
 	}
 
@@ -41,8 +37,13 @@ const Wrapper = styled.main`
 
 	form {
 		width: 90%;
-		margin: 0 auto;
+		margin-inline: auto;
 		max-width: 780px;
+		margin-block-end: 7rem;
+		@media (min-width: 40em) {
+			width: 60%;
+			margin-block-end: 15rem;
+		}
 	}
 
 	form label {
